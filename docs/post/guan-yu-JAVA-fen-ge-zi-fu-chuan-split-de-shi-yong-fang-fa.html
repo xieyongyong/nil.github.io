@@ -81,11 +81,10 @@ String[] parts = str.split("\\+");
 //得到的结果为 ["","1", "2", "3", "4"]
 
 String str = "1+2+3+4+";
-str = str.substring(1);
 String[] parts = str.split("\\+");
 //得到的结果也为 ["1", "2", "3", "4"]
 </code></pre>
-<p>可以看到末尾的空字符串被去除了，但是，如果我们传入的字符串为 <code class="notranslate">1+2+3+4+</code>，同时又想数组中包含末尾的空字符串呢？</p>
+<p>针对第三个demo，可以看到末尾的空字符串被去除了，但是，如果我们传入的字符串为 <code class="notranslate">1+2+3+4+</code>，同时又想数组中包含末尾的空字符串呢？</p>
 <p>这就要引出<code class="notranslate">String.split()</code>的第二个参数了:</p>
 <pre class="notranslate"><code class="notranslate">String str = "+1+2+3+4";
 String[] parts = str.split("\\+", -1);
