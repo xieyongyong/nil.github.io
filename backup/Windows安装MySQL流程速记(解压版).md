@@ -42,12 +42,14 @@ default-storage-engine=INNODB
 
 **_2.3初始化_**
 
-`mysqld --initialize-insecure
+```
+mysqld --initialize-insecure
 或
 mysqld --initialize
 #初始化没有失败的话，会在data目录下面有个“机器名字.er的日志文件，启动的时候会随机生成一个密码。
 #最后一句"A temporary password is generated for root@localhost:pXHc//f?04u2",后面的"pXHc//f?o4u2"就是随机密码，这个密码是临时密码，启动后进去的时候要修改。
-`
+```
+
 
 **_2.4安装服务_**
 

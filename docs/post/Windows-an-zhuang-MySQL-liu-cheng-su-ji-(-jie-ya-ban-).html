@@ -102,7 +102,12 @@ default-storage-engine=INNODB
 <p><strong><em>2.2保存my.ini文件后，使用cmd管理员模式进入MySQL的bin目录下</em></strong>（<strong>管理员</strong>模式！！！）</p>
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/xieyongyong/xieyongyong.github.io/assets/55351400/a75143fe-391e-4b8b-b1d2-7b2bb58502c0"><img src="https://github.com/xieyongyong/xieyongyong.github.io/assets/55351400/a75143fe-391e-4b8b-b1d2-7b2bb58502c0" alt="image" style="max-width: 100%;"></a></p>
 <p><strong><em>2.3初始化</em></strong></p>
-<p><code class="notranslate">mysqld --initialize-insecure 或 mysqld --initialize #初始化没有失败的话，会在data目录下面有个“机器名字.er的日志文件，启动的时候会随机生成一个密码。 #最后一句"A temporary password is generated for root@localhost:pXHc//f?04u2",后面的"pXHc//f?o4u2"就是随机密码，这个密码是临时密码，启动后进去的时候要修改。 </code></p>
+<pre class="notranslate"><code class="notranslate">mysqld --initialize-insecure
+或
+mysqld --initialize
+#初始化没有失败的话，会在data目录下面有个“机器名字.er的日志文件，启动的时候会随机生成一个密码。
+#最后一句"A temporary password is generated for root@localhost:pXHc//f?04u2",后面的"pXHc//f?o4u2"就是随机密码，这个密码是临时密码，启动后进去的时候要修改。
+</code></pre>
 <p><strong><em>2.4安装服务</em></strong></p>
 <p><code class="notranslate">mysqld -install</code><br>
 若出现Service successfully installed，证明安装成功</p>
