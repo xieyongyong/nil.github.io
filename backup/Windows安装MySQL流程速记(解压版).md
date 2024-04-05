@@ -8,6 +8,7 @@
 
 ### **2.安装**
 将下载好的压缩包解压到自己要安装的文件夹下
+**_注意： 解压存放的目录路径名称不能包含中文_**
 
 > 解压后的文件夹不包含data文件夹和my.ini配置文件
 
@@ -41,11 +42,17 @@ default-storage-engine=INNODB
 
 **_2.3初始化_**
 
-`mysqld --initialize-insecure`
+`mysqld --initialize-insecure
+或
+mysqld --initialize
+#初始化没有失败的话，会在data目录下面有个“机器名字.er的日志文件，启动的时候会随机生成一个密码。
+#最后一句"A temporary password is generated for root@localhost:pXHc//f?04u2",后面的"pXHc//f?o4u2"就是随机密码，这个密码是临时密码，启动后进去的时候要修改。
+`
 
 **_2.4安装服务_**
 
 `mysqld -install`
+若出现Service successfully installed，证明安装成功
 
 **_2.5启动服务_**
 
@@ -70,4 +77,19 @@ x64:https://aka.ms/vs/17/release/vc_redist.x64.exe
 或
 官网地址 (vcredist) ：[Download Visual C++ Redistributable Packages for Visual Studio 2013 from Official Microsoft Download Center](https://www.microsoft.com/zh-CN/download/details.aspx?id=40784)
 
+**3.2 一些其他命令**
 
+```
+#跳过密码（mysqld标签下）
+skip-grant-tables
+
+#刷新权限
+flush privileges 
+
+#启动/停止mysql服务
+net stop mysql
+net start mysql
+
+#删除mysql服务
+sc delete mysql
+```

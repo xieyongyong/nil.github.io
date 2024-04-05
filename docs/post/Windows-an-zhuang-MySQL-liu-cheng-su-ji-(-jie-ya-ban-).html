@@ -74,7 +74,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <h3><strong>1.下载</strong></h3>
 <p>官方的下载地址如下：<a href="https://dev.mysql.com/downloads/mysql/" rel="nofollow">https://dev.mysql.com/downloads/mysql/</a></p>
 <h3><strong>2.安装</strong></h3>
-<p>将下载好的压缩包解压到自己要安装的文件夹下</p>
+<p>将下载好的压缩包解压到自己要安装的文件夹下<br>
+<strong><em>注意： 解压存放的目录路径名称不能包含中文</em></strong></p>
 <blockquote>
 <p>解压后的文件夹不包含data文件夹和my.ini配置文件</p>
 </blockquote>
@@ -101,9 +102,10 @@ default-storage-engine=INNODB
 <p><strong><em>2.2保存my.ini文件后，使用cmd管理员模式进入MySQL的bin目录下</em></strong>（<strong>管理员</strong>模式！！！）</p>
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/xieyongyong/xieyongyong.github.io/assets/55351400/a75143fe-391e-4b8b-b1d2-7b2bb58502c0"><img src="https://github.com/xieyongyong/xieyongyong.github.io/assets/55351400/a75143fe-391e-4b8b-b1d2-7b2bb58502c0" alt="image" style="max-width: 100%;"></a></p>
 <p><strong><em>2.3初始化</em></strong></p>
-<p><code class="notranslate">mysqld --initialize-insecure</code></p>
+<p><code class="notranslate">mysqld --initialize-insecure 或 mysqld --initialize #初始化没有失败的话，会在data目录下面有个“机器名字.er的日志文件，启动的时候会随机生成一个密码。 #最后一句"A temporary password is generated for root@localhost:pXHc//f?04u2",后面的"pXHc//f?o4u2"就是随机密码，这个密码是临时密码，启动后进去的时候要修改。 </code></p>
 <p><strong><em>2.4安装服务</em></strong></p>
-<p><code class="notranslate">mysqld -install</code></p>
+<p><code class="notranslate">mysqld -install</code><br>
+若出现Service successfully installed，证明安装成功</p>
 <p><strong><em>2.5启动服务</em></strong></p>
 <p><code class="notranslate">net start mysql</code></p>
 <p><strong><em>2.6修改密码</em></strong></p>
@@ -118,7 +120,21 @@ default-storage-engine=INNODB
 x86:<a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" rel="nofollow">https://aka.ms/vs/17/release/vc_redist.x86.exe</a><br>
 x64:<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" rel="nofollow">https://aka.ms/vs/17/release/vc_redist.x64.exe</a><br>
 或<br>
-官网地址 (vcredist) ：<a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=40784" rel="nofollow">Download Visual C++ Redistributable Packages for Visual Studio 2013 from Official Microsoft Download Center</a></p></div>
+官网地址 (vcredist) ：<a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=40784" rel="nofollow">Download Visual C++ Redistributable Packages for Visual Studio 2013 from Official Microsoft Download Center</a></p>
+<p><strong>3.2 一些其他命令</strong></p>
+<pre class="notranslate"><code class="notranslate">#跳过密码（mysqld标签下）
+skip-grant-tables
+
+#刷新权限
+flush privileges 
+
+#启动/停止mysql服务
+net stop mysql
+net start mysql
+
+#删除mysql服务
+sc delete mysql
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"> 好运常在！❤️</div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
