@@ -9,7 +9,26 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="更改Windows用户下中文名">
+<meta name="description" content="首先声明，Windows系统如果用中文名作为路径的话，会导致很多不必要的麻烦（例如某些软件运行时会因为中文转码后找不到路径），因此，用户名最好使用英文，即C:\Users下的文件夹名，例如下图为admin
+
+![image](https://github.com/xieyongyong/xieyongyong.github.io/assets/55351400/2a84ba03-52e2-4e53-bb02-19bdafe6f450)
+**那么如果我们已经用了很长时间了，但是又不想重装系统该怎么办呢？**
+
+接下来进入正题（干货！）：
+
+1. 以管理员身份打开cmd（桌面左下角搜索框搜索cmd，选择以管理员身份打开，一定要用管理员身份！）， 然后输入引号内代码“net user administrator /active:yes”，回车，这时候会发现它提示成功，我们已经可以登录管理员（administrator）账号了。">
+<meta property="og:title" content="更改Windows用户下中文名">
+<meta property="og:description" content="首先声明，Windows系统如果用中文名作为路径的话，会导致很多不必要的麻烦（例如某些软件运行时会因为中文转码后找不到路径），因此，用户名最好使用英文，即C:\Users下的文件夹名，例如下图为admin
+
+![image](https://github.com/xieyongyong/xieyongyong.github.io/assets/55351400/2a84ba03-52e2-4e53-bb02-19bdafe6f450)
+**那么如果我们已经用了很长时间了，但是又不想重装系统该怎么办呢？**
+
+接下来进入正题（干货！）：
+
+1. 以管理员身份打开cmd（桌面左下角搜索框搜索cmd，选择以管理员身份打开，一定要用管理员身份！）， 然后输入引号内代码“net user administrator /active:yes”，回车，这时候会发现它提示成功，我们已经可以登录管理员（administrator）账号了。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://xieyongyong.github.io/post/geng-gai-Windows-yong-hu-xia-zhong-wen-ming.html">
+<meta property="og:image" content="https://i.postimg.cc/PxSjvT60/Dest-Crop-Image.png">
 <title>更改Windows用户下中文名</title>
 
 
